@@ -115,4 +115,4 @@ Only facts verified while preparing this template are listed.
 - **No fact-check gate:** the tools do not verify that a charted number matches a cited source. Review every figure yourself.
 - **Archive publishing is host-specific:** `build_archive.py` makes a standalone HTML file. The workflow's step 8 describes publishing it with the Claude Artifact tool, which only applies if you use that environment.
 - **The outline step has no script.** In the workflow an AI agent (or you) writes the outline JSON by hand and `validate.py` checks its shape.
-- **No license is included.** Add one before reuse.
+- **License:** MIT, see [LICENSE](LICENSE).
