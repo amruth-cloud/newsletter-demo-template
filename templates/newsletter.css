@@ -1,0 +1,147 @@
+/* Authored as normal CSS for readability. render_email.py inlines this into
+   style="" attributes via premailer at render time and strips this <style>
+   block, since Gmail/Outlook don't reliably honor a linked/head stylesheet. */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f3f1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.email-wrapper {
+  width: 100%;
+  background-color: #f4f3f1;
+  padding: 24px 0;
+}
+
+.email-content {
+  width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fcfcfb;
+}
+
+.preheader {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 1px;
+  color: #fcfcfb;
+}
+
+.header {
+  padding: 32px 32px 16px 32px;
+}
+
+.header-title {
+  font-size: 22px;
+  line-height: 28px;
+  color: #0b0b0b;
+  font-weight: bold;
+  margin: 0;
+}
+
+.intro {
+  padding: 0 32px 16px 32px;
+  font-size: 15px;
+  line-height: 22px;
+  color: #52514e;
+}
+
+.section {
+  padding: 8px 32px 24px 32px;
+}
+
+.section-heading {
+  font-size: 17px;
+  line-height: 22px;
+  color: #0b0b0b;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.section-body {
+  font-size: 15px;
+  line-height: 22px;
+  color: #29281f;
+}
+
+.chart-image {
+  width: 100%;
+  max-width: 536px;
+  height: auto;
+  display: block;
+  margin: 8px 0 0 0;
+}
+
+/* Editorial illustration inside a section. Sits above the section's chart so
+   art never separates a chart from the copy explaining it. */
+.section-image {
+  width: 100%;
+  max-width: 536px;
+  height: auto;
+  display: block;
+  margin: 4px 0 12px 0;
+}
+
+/* Hero runs the full 600px content width, flush to the card edges. */
+.hero-cell {
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.browser-bar {
+  width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.browser-link {
+  padding: 0 32px 10px 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 16px;
+  color: #898781;
+  text-align: center;
+}
+
+.browser-link a {
+  color: #898781;
+  text-decoration: underline;
+}
+
+.divider {
+  border-top: 1px solid #e1e0d9;
+  margin: 0 32px;
+}
+
+.sources {
+  padding: 20px 32px 8px 32px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #898781;
+}
+
+.sources a {
+  color: #2a78d6;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 16px 32px 32px 32px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #898781;
+  text-align: center;
+}

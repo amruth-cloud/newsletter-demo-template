@@ -1,0 +1,5 @@
+# One email address per line. Lines starting with # are ignored.
+# Copy this file to config/recipients.txt (gitignored) and fill in real addresses.
+#
+# someone@example.com
+# someone-else@example.com

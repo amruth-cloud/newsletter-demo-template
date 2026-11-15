@@ -1,0 +1,10 @@
+{
+  "topic": "SAMPLE ONLY: fictional desk-plant trends",
+  "source": "sample_fixture",
+  "queried_at": "2000-01-01T00:00:00Z",
+  "content": "FICTIONAL SAMPLE DATA for testing the pipeline offline. Every figure below is invented. In the fictional survey, 60% of imaginary office workers keep a desk plant, 25% plan to buy one and 15% do not. Invented median plant lifespan rose from 8 months to 14 months over four fictional years.",
+  "citations": [
+    {"title": "Example Source One (fictional)", "url": "https://example.com/source-one", "snippet": "Invented snippet."},
+    {"title": "Example Source Two (fictional)", "url": "https://example.com/source-two", "snippet": "Invented snippet."}
+  ]
+}

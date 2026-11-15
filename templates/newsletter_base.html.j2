@@ -1,0 +1,101 @@
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ subject }}</title>
+<style type="text/css">
+{{ css }}
+</style>
+</head>
+<body>
+<span class="preheader">{{ preheader }}</span>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="email-wrapper">
+  <tr>
+    <td align="center">
+      {% if archive_url %}
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" class="browser-bar">
+        <tr>
+          <td class="browser-link" align="center">
+            <a href="{{ archive_url }}">View this issue in your browser</a>
+          </td>
+        </tr>
+      </table>
+      {% endif %}
+      <!--[if mso]>
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" align="center"><tr><td>
+      <![endif]-->
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" class="email-content">
+        {% if hero_src %}
+        <tr>
+          <td class="hero-cell">
+            <img src="{{ hero_src }}" alt="{{ hero_alt }}" class="hero-image">
+          </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td class="header">
+            <p class="header-title">{{ subject }}</p>
+          </td>
+        </tr>
+        {% if intro %}
+        <tr>
+          <td class="intro">{{ intro }}</td>
+        </tr>
+        {% endif %}
+        {% for section in sections %}
+        <tr>
+          <td class="section">
+            <p class="section-heading">{{ section.heading }}</p>
+            <div class="section-body">{{ section.body_html | safe }}</div>
+            {% if section.image_ref and image_srcs.get(section.image_ref) %}
+            <img src="{{ image_srcs[section.image_ref].src }}" alt="{{ image_srcs[section.image_ref].alt }}" class="section-image">
+            {% endif %}
+            {% if section.chart_ref and chart_srcs.get(section.chart_ref) %}
+            <img src="{{ chart_srcs[section.chart_ref] }}" alt="{{ section.heading }} chart" class="chart-image">
+            {% endif %}
+          </td>
+        </tr>
+        {% if not loop.last %}
+        <tr>
+          <td><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="divider">&nbsp;</td></tr></table></td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% if sources %}
+        <tr>
+          <td><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="divider">&nbsp;</td></tr></table></td>
+        </tr>
+        <tr>
+          <td class="sources">
+            <strong>Sources</strong><br>
+            {% for source in sources %}
+            <a href="{{ source.url }}">{{ source.title or source.url }}</a>{% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+          </td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td class="footer">
+            You're receiving this because you're on this newsletter's recipient list.
+          </td>
+        </tr>
+      </table>
+      <!--[if mso]>
+      </td></tr></table>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+credentials.json
+token.json
+client_secret*.json
+*.pem
+*.key
+
+# Generated outputs, logs and sent-mail records
+.tmp/
+out/
+output/
+archive/
+sent/
+logs/
+*.log
+*.eml
+
+# Recipient / lead / subscriber data
+config/recipients.txt
+config/*.csv
+recipients*.txt
+!config/recipients.example.txt
+leads*
+subscribers*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Fake sample data (a global *.json ignore must not hide these)
+!examples/
+!examples/*.json

@@ -1,0 +1,43 @@
+{
+  "topic": "SAMPLE ONLY: fictional desk-plant trends",
+  "subject": "Sample Issue: The Fictional Desk-Plant Report",
+  "preheader": "Sample data only. Every number in this issue is invented to test the pipeline.",
+  "intro": "This is a sample issue built from invented data. It exists so you can run the whole pipeline offline and see what each step produces.",
+  "sections": [
+    {
+      "heading": "Who keeps a plant (invented numbers)",
+      "body_html": "<p>In this <strong>fictional</strong> survey, 60% of imaginary office workers keep a desk plant. The figures are made up for testing.</p>",
+      "chart_ref": "chart_1"
+    },
+    {
+      "heading": "A single headline number (invented)",
+      "body_html": "<p>One stat card, to exercise the <code>stat</code> chart type.</p>",
+      "chart_ref": "chart_2"
+    },
+    {
+      "heading": "Lifespan over time (invented)",
+      "body_html": "<p>A line chart of an invented median plant lifespan.</p>",
+      "chart_ref": "chart_3"
+    },
+    {
+      "heading": "Comparison (invented)",
+      "body_html": "<p>A bar chart with invented values.</p>",
+      "chart_ref": "chart_4"
+    }
+  ],
+  "chart_specs": [
+    {"id": "chart_1", "type": "donut", "title": "Fictional survey: desk plant ownership",
+     "labels": ["Keep one (60%)", "Plan to (25%)", "No (15%)"], "values": [60, 25, 15]},
+    {"id": "chart_2", "type": "stat", "title": "Invented headline figure",
+     "value": "14 months", "caption": "invented median plant lifespan, sample data only"},
+    {"id": "chart_3", "type": "line", "title": "Invented median lifespan (months)",
+     "labels": ["Year 1", "Year 2", "Year 3", "Year 4"], "values": [8, 10, 12, 14]},
+    {"id": "chart_4", "type": "bar", "title": "Invented plant counts per office",
+     "labels": ["Small", "Medium", "Large"], "values": [3, 9, 21]}
+  ],
+  "image_specs": [],
+  "sources": [
+    {"title": "Example Source One (fictional)", "url": "https://example.com/source-one"},
+    {"title": "Example Source Two (fictional)", "url": "https://example.com/source-two"}
+  ]
+}
